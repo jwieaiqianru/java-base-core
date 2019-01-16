@@ -2,12 +2,12 @@ package com.yezi.coco.concurrence;
 
 public class ThreadLocalDemo {
 
-    ThreadLocal threadLocal = new ThreadLocal<String>();
+    private ThreadLocal<String> threadLocal = new ThreadLocal<>();
 
-    public void  set() {
+    private void  set() {
         threadLocal.set(Thread.currentThread().getName());
     }
-    public  Object getString() {
+    private Object getString() {
         return threadLocal.get();
     }
     public static void main(String[] args) {
